@@ -1,23 +1,28 @@
 package model;
 
-// 負責：C
-public class Passenger extends Person {
+// 負責：成員3（旅客與訂位）
+public class Passenger {
+    private String id;
+    private String name;
     private String passportNo;
     private PassengerStatus status = PassengerStatus.BOOKED;
 
     public Passenger(String id, String name, String passportNo) {
-        super(id, name);
+        this.id = id;
+        this.name = name;
         this.passportNo = passportNo;
     }
 
+    public String getId() { return id; }
+    public String getName() { return name; }
     public String getPassportNo() { return passportNo; }
     public PassengerStatus getStatus() { return status; }
 
-    // TODO: 封裝重點：檢查狀態轉換是否合法（只能 BOOKED→CHECKED_IN→BOARDED）
-    public void setStatus(PassengerStatus status) {
-        this.status = status;
+    // TODO: 只有 BOOKED 才能改成 CHECKED_IN，否則丟出 IllegalStateException
+    public void checkIn() {
     }
 
-    @Override
-    public String getRole() { return "Passenger"; }
+    // TODO: 只有 CHECKED_IN 才能改成 BOARDED，否則丟出 IllegalStateException
+    public void board() {
+    }
 }
