@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-// 負責：成員1（組長／系統整合）
+// 負責：成員1（組長／系統整合）Elly
 // 主程式：主選單整合各模組
 public class AirportSystem {
     private List<Flight> flights = new ArrayList<>();
