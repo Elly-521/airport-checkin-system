@@ -1,4 +1,5 @@
 package model;
+//test
 
 // 負責：成員5（報到與行李）
 // 實作 Printable：印出行李條（和 BoardingPass 實作同一個介面）
