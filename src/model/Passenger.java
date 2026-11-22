@@ -20,6 +20,7 @@ public class Passenger {
 
     // TODO: 只有 BOOKED 才能改成 CHECKED_IN，否則丟出 IllegalStateException
     public void checkIn() {
+        System.out.println("hello world.");
     }
 
     // TODO: 只有 CHECKED_IN 才能改成 BOARDED，否則丟出 IllegalStateException
