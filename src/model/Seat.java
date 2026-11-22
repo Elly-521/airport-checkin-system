@@ -5,6 +5,7 @@ package model;
 public abstract class Seat {
     private String seatNo;          // 例如 "12A"
     private boolean available = true;
+    private int kg;
 
     public Seat(String seatNo) {
         this.seatNo = seatNo;
