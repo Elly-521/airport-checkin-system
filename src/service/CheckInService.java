@@ -21,3 +21,4 @@ public interface CheckInService {
     // 報到方式名稱，例如「櫃台報到」
     String getName();
 }
+
