@@ -20,10 +20,17 @@ public class Passenger {
 
     // TODO: 只有 BOOKED 才能改成 CHECKED_IN，否則丟出 IllegalStateException
     public void checkIn() {
-        System.out.println("hello world.");
+        if (status != PassengerStatus.BOOKED) {
+        throw new IllegalStateException("旅客無法報到");
+    }
+    status = PassengerStatus.CHECKED_IN;
     }
 
     // TODO: 只有 CHECKED_IN 才能改成 BOARDED，否則丟出 IllegalStateException
     public void board() {
+        if (status != PassengerStatus.CHECKED_IN) {
+        throw new IllegalStateException("旅客無法登機");
+    }
+    status = PassengerStatus.BOARDED;
     }
 }
